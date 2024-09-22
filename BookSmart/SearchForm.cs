@@ -35,7 +35,7 @@ namespace BookSmart
 
         private void SearchBooks(string searchTerm)
         {
-            // SQL query with JOINs to search in multiple tables (Author, Publisher, Book)
+            // SQL query with JOINs to search in multiple tables (Author, Publisher, Book) 
             string query = @"
         SELECT 
             Book.ISBN, 
@@ -46,13 +46,16 @@ namespace BookSmart
             Author.FirstName + ' ' + Author.LastName AS AuthorName, 
             Publisher.PublisherName, 
             Book.Published, 
-            Book.Price
+            Book.Price,
+            CONCAT(Inventory.AisleNumber , '-', Inventory.ShelfNumber) AS ShelfLocation
         FROM 
             Book
         INNER JOIN 
             Author ON Book.AuthorID = Author.AuthorID
         INNER JOIN 
             Publisher ON Book.PublisherID = Publisher.PublisherID
+        INNER JOIN
+            Inventory ON Book.BookID = Inventory.BookID
         WHERE 
             (Author.FirstName LIKE @searchTerm OR Author.LastName LIKE @searchTerm)
             OR (Publisher.PublisherName LIKE @searchTerm)
@@ -60,6 +63,7 @@ namespace BookSmart
             OR (Book.Title LIKE @searchTerm)
             OR (Book.Series LIKE @searchTerm)
             OR (Book.Genre LIKE @searchTerm);
+            OR (Inventory.AisleNumber LIKE @searchTerm OR Inventory.ShelfNumber LIKE @searchTerm)
     ";
 
             // Connect to the database using the provided connection string
@@ -103,6 +107,7 @@ namespace BookSmart
                 }
             }
         }
+
 
         private void btnBestSellers_Click(object sender, EventArgs e)
         {
