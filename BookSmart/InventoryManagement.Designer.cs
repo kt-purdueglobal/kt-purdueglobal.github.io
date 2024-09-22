@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
+            this.removeButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.updateButton = new System.Windows.Forms.Button();
             this.returnHome = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -56,23 +56,25 @@
             this.dataGridView1.Size = new System.Drawing.Size(384, 411);
             this.dataGridView1.TabIndex = 0;
             // 
-            // button1
+            // addButton
             // 
-            this.button1.Location = new System.Drawing.Point(34, 223);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add Book";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addButton.Location = new System.Drawing.Point(34, 223);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(109, 23);
+            this.addButton.TabIndex = 1;
+            this.addButton.Text = "Add Book";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
-            // button3
+            // removeButton
             // 
-            this.button3.Location = new System.Drawing.Point(149, 223);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Remove Book";
-            this.button3.UseVisualStyleBackColor = true;
+            this.removeButton.Location = new System.Drawing.Point(149, 223);
+            this.removeButton.Name = "removeButton";
+            this.removeButton.Size = new System.Drawing.Size(109, 23);
+            this.removeButton.TabIndex = 3;
+            this.removeButton.Text = "Remove Book";
+            this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
             // textBox1
             // 
@@ -154,14 +156,15 @@
             this.textBox5.Size = new System.Drawing.Size(216, 22);
             this.textBox5.TabIndex = 16;
             // 
-            // button2
+            // updateButton
             // 
-            this.button2.Location = new System.Drawing.Point(264, 223);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 23);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Update Book";
-            this.button2.UseVisualStyleBackColor = true;
+            this.updateButton.Location = new System.Drawing.Point(264, 223);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(109, 23);
+            this.updateButton.TabIndex = 18;
+            this.updateButton.Text = "Update Book";
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // returnHome
             // 
@@ -179,7 +182,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.returnHome);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.updateButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label4);
@@ -190,8 +193,8 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.removeButton);
+            this.Controls.Add(this.addButton);
             this.Controls.Add(this.dataGridView1);
             this.Name = "InventoryManagement";
             this.Text = "BookSmart - InventoryManagement";
@@ -204,8 +207,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button removeButton;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
@@ -216,7 +219,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Button returnHome;
     }
 }

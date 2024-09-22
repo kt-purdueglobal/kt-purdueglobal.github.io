@@ -23,5 +23,20 @@ namespace BookSmart
             this.Hide();
             menu_form.Show();
         }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Book Added Successfully!");
+        }
+
+        private void removeButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Book Successfully Removed!");
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Book Successfully Updated!");
+        }
     }
 }
