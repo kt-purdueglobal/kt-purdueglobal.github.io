@@ -264,7 +264,7 @@ namespace BookSmart
             menu_form.Show();
         }
 
-        private void btnRecentlyAdded_Click(object sender, EventArgs e)
+        private void btnRecentlyPublished_Click(object sender, EventArgs e)
         {
             DisplayRecentlyPublishedBooks();
         }
