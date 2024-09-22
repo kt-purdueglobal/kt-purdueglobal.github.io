@@ -115,9 +115,9 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(162, 19);
             this.button5.TabIndex = 10;
-            this.button5.Text = "Browse Recently Added";
+            this.button5.Text = "Browse Recently Published";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.btnRecentlyAdded_Click);
+            this.button5.Click += new System.EventHandler(this.btnRecentlyPublished_Click);
             // 
             // dataGridViewBooksResult
             // 
@@ -186,6 +186,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnRecentlyPublished;
         private System.Windows.Forms.DataGridView dataGridViewBooksResult;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button returnHome;
