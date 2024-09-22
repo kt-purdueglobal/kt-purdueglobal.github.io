@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Linq.Expressions;
 
 namespace BookSmart
 {
@@ -264,12 +265,12 @@ namespace BookSmart
 
         private void btnRecentlyAdded_Click(object sender, EventArgs e)
         {
-            DisplayRecentlyAddedBooks();
+            DisplayRecentlyPublishedBooks();
         }
 
-        private void DisplayRecentlyAddedBooks()
+        private void DisplayRecentlyPublishedBooks()
         {
-            // SQL query to get the top 10 most recently added books
+            // SQL query to get the top 10 most recently published books
             string query = @"
         SELECT TOP 10 
             Book.ISBN, 
@@ -301,12 +302,12 @@ namespace BookSmart
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                        DataTable recentlyAddedBooks = new DataTable();
+                        DataTable recentlyPublishedBooks = new DataTable();
 
                         // Fill the DataTable with the results from the query
-                        adapter.Fill(recentlyAddedBooks);
+                        adapter.Fill(recentlyPublishedBooks);
 
-                        if (recentlyAddedBooks.Rows.Count == 0)
+                        if (recentlyPublishedBooks.Rows.Count == 0)
                         {
                             // If no recently added books found, display a message
                             DataTable noResultsTable = new DataTable();
@@ -318,7 +319,7 @@ namespace BookSmart
                         else
                         {
                             // Display the recently added books in the DataGridView
-                            dataGridViewBooksResult.DataSource = recentlyAddedBooks;
+                            dataGridViewBooksResult.DataSource = recentlyPublishedBooks;
                             dataGridViewBooksResult.ColumnHeadersVisible = true;
 
                             // Auto-resize columns
@@ -401,6 +402,5 @@ namespace BookSmart
                 }
             }
         }
-
     }
 }
