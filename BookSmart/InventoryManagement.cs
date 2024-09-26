@@ -38,5 +38,10 @@ namespace BookSmart
         {
             MessageBox.Show("Book Successfully Updated!");
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
