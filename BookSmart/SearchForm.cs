@@ -38,7 +38,7 @@ namespace BookSmart
 
         private void SearchBooks(string searchTerm)
         {
-            // SQL query with JOINs to search in multiple tables (Author, Publisher, Book) 
+            // SQL query with JOINs to search in multiple tables (Author, Publisher, Book, Inventory) 
             string query = @"
         SELECT 
             Book.ISBN, 
@@ -50,7 +50,8 @@ namespace BookSmart
             Publisher.PublisherName, 
             Book.Published, 
             Book.Price,
-            CONCAT(Inventory.AisleNumber , '-', Inventory.ShelfNumber) AS ShelfLocation
+            CONCAT(Inventory.AisleNumber , '-', Inventory.ShelfNumber) AS ShelfLocation,
+            Inventory.QuantityInStock -- Include quantity in stock
         FROM 
             Book
         INNER JOIN 
