@@ -49,7 +49,7 @@
             // ManageInventoryButton
             // 
             this.ManageInventoryButton.Location = new System.Drawing.Point(197, 144);
-            this.ManageInventoryButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ManageInventoryButton.Margin = new System.Windows.Forms.Padding(2);
             this.ManageInventoryButton.Name = "ManageInventoryButton";
             this.ManageInventoryButton.Size = new System.Drawing.Size(189, 34);
             this.ManageInventoryButton.TabIndex = 2;
@@ -60,7 +60,7 @@
             // SalesDataButton
             // 
             this.SalesDataButton.Location = new System.Drawing.Point(197, 183);
-            this.SalesDataButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SalesDataButton.Margin = new System.Windows.Forms.Padding(2);
             this.SalesDataButton.Name = "SalesDataButton";
             this.SalesDataButton.Size = new System.Drawing.Size(189, 34);
             this.SalesDataButton.TabIndex = 3;
@@ -71,7 +71,7 @@
             // SearchWindowButton
             // 
             this.SearchWindowButton.Location = new System.Drawing.Point(197, 105);
-            this.SearchWindowButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SearchWindowButton.Margin = new System.Windows.Forms.Padding(2);
             this.SearchWindowButton.Name = "SearchWindowButton";
             this.SearchWindowButton.Size = new System.Drawing.Size(189, 34);
             this.SearchWindowButton.TabIndex = 7;
@@ -99,7 +99,7 @@
             this.Controls.Add(this.SalesDataButton);
             this.Controls.Add(this.ManageInventoryButton);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainMenu";
             this.Text = "BookSmart - Home";
             this.ResumeLayout(false);

@@ -16,6 +16,14 @@ namespace BookSmart
 {
     public partial class InventoryManagement : Form
     {
+        private void InventoryManagement_Load(object sender, EventArgs e)
+        {
+            System.Drawing.Rectangle workingRectangle = Screen.PrimaryScreen.WorkingArea;
+            this.Size = new System.Drawing.Size(Convert.ToInt32(1 * workingRectangle.Width),
+                Convert.ToInt32(1 * workingRectangle.Height));
+
+            this.Location = new System.Drawing.Point(0, 0);
+        }
         public InventoryManagement()
         {
             InitializeComponent();

@@ -14,6 +14,14 @@ namespace BookSmart
 {
     public partial class SearchForm : Form
     {
+        private void SearchForm_Load(object sender, EventArgs e)
+        {
+            System.Drawing.Rectangle workingRectangle = Screen.PrimaryScreen.WorkingArea;
+            this.Size = new System.Drawing.Size(Convert.ToInt32(1 * workingRectangle.Width),
+                Convert.ToInt32(1 * workingRectangle.Height));
+
+            this.Location = new System.Drawing.Point(0, 0);
+        }
 
         public SearchForm()
         {
@@ -23,7 +31,7 @@ namespace BookSmart
         // This connects the GUI to your database
         //private string connectionString = "Server=DESKTOP-0K4N3E2\\SQLEXPRESS;Database=Booksmart;Trusted_Connection=True;"; //replace 'DESKTOP-1U63KC' with your server
 
-        private string connectionString = "Server=KORRI-ACER\\SQLEXPRESS;Database=Booksmart;Trusted_Connection=True;";
+        private string connectionString = "Server=DESKTOP-0K4N3E2\\SQLEXPRESS;Database=Booksmart;Trusted_Connection=True;";
 
 
 
@@ -121,7 +129,7 @@ namespace BookSmart
         {
             // SQL query to get the top 10 best-selling books with text column conversion
             string query = @"
-        SELECT TOP 10 
+        SELECT TOP 50 
             Book.ISBN, 
             Book.Title, 
             Book.Series, 
@@ -200,7 +208,7 @@ namespace BookSmart
         {
             // SQL query to get the top 10 highest-rated books
             string query = @"
-        SELECT TOP 10 
+        SELECT TOP 50 
             Book.ISBN, 
             Book.Title, 
             Book.Series, 
@@ -281,7 +289,7 @@ namespace BookSmart
         {
             // SQL query to get the top 10 most recently published books
             string query = @"
-        SELECT TOP 10 
+        SELECT TOP 50 
             Book.ISBN, 
             Book.Title, 
             Book.Series, 
