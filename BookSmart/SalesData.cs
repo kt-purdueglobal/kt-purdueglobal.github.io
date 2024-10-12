@@ -12,6 +12,10 @@ namespace BookSmart
 {
     public partial class SalesData : Form
     {
+        private void SalesData_Load(object sender, EventArgs e)
+        {
+
+        }
         public SalesData()
         {
             InitializeComponent();
