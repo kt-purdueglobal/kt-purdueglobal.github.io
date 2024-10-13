@@ -54,7 +54,7 @@ namespace BookSmart
             Book.Series, 
             Book.Genre, 
             Book.AverageRating, 
-            Author.FirstName + ' ' + Author.LastName AS AuthorName, 
+            Author.AuthorName, 
             Publisher.PublisherName, 
             Book.Published, 
             Book.Price,
@@ -69,7 +69,7 @@ namespace BookSmart
         INNER JOIN
             Inventory ON Book.BookID = Inventory.BookID
         WHERE 
-            (Author.FirstName LIKE @searchTerm OR Author.LastName LIKE @searchTerm)
+            (Author.AuthorName LIKE @searchTerm)
             OR (Publisher.PublisherName LIKE @searchTerm)
             OR (Book.ISBN LIKE @searchTerm)
             OR (Book.Title LIKE @searchTerm)
@@ -135,7 +135,7 @@ namespace BookSmart
             Book.Series, 
             CONVERT(varchar(max), Book.Genre) AS Genre, -- Convert text to varchar(max)
             Book.AverageRating, 
-            Author.FirstName + ' ' + Author.LastName AS AuthorName, 
+            Author.AuthorName, 
             Publisher.PublisherName, 
             Book.Published, 
             Book.Price, 
@@ -154,8 +154,7 @@ namespace BookSmart
             Book.Series, 
             CONVERT(varchar(max), Book.Genre), -- Convert text to varchar(max)
             Book.AverageRating, 
-            Author.FirstName, 
-            Author.LastName, 
+            Author.AuthorName, 
             Publisher.PublisherName, 
             Book.Published, 
             Book.Price
@@ -214,7 +213,7 @@ namespace BookSmart
             Book.Series, 
             CONVERT(varchar(max), Book.Genre) AS Genre, -- Convert text to varchar(max) if needed
             Book.AverageRating, 
-            Author.FirstName + ' ' + Author.LastName AS AuthorName, 
+            Author.AuthorName, 
             Publisher.PublisherName, 
             Book.Published, 
             Book.Price
@@ -295,7 +294,7 @@ namespace BookSmart
             Book.Series, 
             CONVERT(varchar(max), Book.Genre) AS Genre, -- Convert text to varchar(max) if needed
             Book.AverageRating, 
-            Author.FirstName + ' ' + Author.LastName AS AuthorName, 
+            Author.AuthorName, 
             Publisher.PublisherName, 
             Book.Published, 
             Book.Price
@@ -366,7 +365,7 @@ namespace BookSmart
             Book.Series, 
             CONVERT(varchar(max), Book.Genre) AS Genre, -- Convert text to varchar(max) if needed
             Book.AverageRating, 
-            Author.FirstName + ' ' + Author.LastName AS AuthorName, 
+            Author.AuthorName, 
             Publisher.PublisherName, 
             Book.Published, 
             Book.Price
