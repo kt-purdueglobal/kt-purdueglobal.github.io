@@ -31,7 +31,7 @@ namespace BookSmart
         // This connects the GUI to your database
         //private string connectionString = "Server=DESKTOP-0K4N3E2\\SQLEXPRESS;Database=Booksmart;Trusted_Connection=True;"; //replace 'DESKTOP-1U63KC' with your server
 
-        private string connectionString = "Server=DESKTOP-0K4N3E2\\SQLEXPRESS;Database=Booksmart;Trusted_Connection=True;";
+        private string connectionString = "Server=DESKTOP-1UT63KC\\SQLEXPRESS;Database=BookSmart;Trusted_Connection=True;";
 
 
 
@@ -159,8 +159,7 @@ namespace BookSmart
             Book.Published, 
             Book.Price
         ORDER BY 
-            TotalSold DESC;
-    ";
+            TotalSold DESC;";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {

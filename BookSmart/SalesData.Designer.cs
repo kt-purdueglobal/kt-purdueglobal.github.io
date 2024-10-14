@@ -2,15 +2,8 @@
 {
     partial class SalesData
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,110 +13,99 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBoxBookTitle = new System.Windows.Forms.ComboBox();
+            this.btnFetchData = new System.Windows.Forms.Button();
+            this.dataGridViewResults = new System.Windows.Forms.DataGridView();
+            this.salesChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.returnHome = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnTop50Sold = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResults)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesChart)).BeginInit();
             this.SuspendLayout();
             // 
-            // chart1
+            // comboBoxBookTitle
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
-            this.chart1.Location = new System.Drawing.Point(1177, 30);
-            this.chart1.Margin = new System.Windows.Forms.Padding(2);
-            this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
-            this.chart1.Size = new System.Drawing.Size(677, 953);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.comboBoxBookTitle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxBookTitle.FormattingEnabled = true;
+            this.comboBoxBookTitle.Location = new System.Drawing.Point(12, 12);
+            this.comboBoxBookTitle.Name = "comboBoxBookTitle";
+            this.comboBoxBookTitle.Size = new System.Drawing.Size(200, 21);
+            this.comboBoxBookTitle.TabIndex = 0;
+            this.comboBoxBookTitle.SelectedIndexChanged += new System.EventHandler(this.comboBoxBookTitle_SelectedIndexChanged);
             // 
-            // dataGridView1
+            // btnFetchData
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(187, 148);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(964, 835);
-            this.dataGridView1.TabIndex = 1;
+            this.btnFetchData.Location = new System.Drawing.Point(218, 10);
+            this.btnFetchData.Name = "btnFetchData";
+            this.btnFetchData.Size = new System.Drawing.Size(75, 23);
+            this.btnFetchData.TabIndex = 2;
+            this.btnFetchData.Text = "Fetch Data";
+            this.btnFetchData.UseVisualStyleBackColor = true;
+            this.btnFetchData.Click += new System.EventHandler(this.btnFetchData_Click);
             // 
-            // button1
+            // dataGridViewResults
             // 
-            this.button1.Location = new System.Drawing.Point(29, 172);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 66);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Search Title";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dataGridViewResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewResults.Location = new System.Drawing.Point(12, 39);
+            this.dataGridViewResults.Name = "dataGridViewResults";
+            this.dataGridViewResults.Size = new System.Drawing.Size(760, 300);
+            this.dataGridViewResults.TabIndex = 3;
             // 
-            // textBox1
+            // salesChart
             // 
-            this.textBox1.Location = new System.Drawing.Point(20, 148);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 20);
-            this.textBox1.TabIndex = 4;
+            this.salesChart.Location = new System.Drawing.Point(12, 345);
+            this.salesChart.Name = "salesChart";
+            this.salesChart.Size = new System.Drawing.Size(760, 300);
+            this.salesChart.TabIndex = 4;
+            this.salesChart.Text = "chart1";
             // 
             // returnHome
             // 
-            this.returnHome.Location = new System.Drawing.Point(29, 255);
-            this.returnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.returnHome.Location = new System.Drawing.Point(12, 660);
             this.returnHome.Name = "returnHome";
-            this.returnHome.Size = new System.Drawing.Size(144, 66);
-            this.returnHome.TabIndex = 14;
-            this.returnHome.Text = "Return Home";
+            this.returnHome.Size = new System.Drawing.Size(75, 23);
+            this.returnHome.TabIndex = 5;
+            this.returnHome.Text = "Home";
             this.returnHome.UseVisualStyleBackColor = true;
             this.returnHome.Click += new System.EventHandler(this.returnHome_Click);
+            // 
+            // btnTop50Sold
+            // 
+            this.btnTop50Sold.Location = new System.Drawing.Point(100, 660);
+            this.btnTop50Sold.Name = "btnTop50Sold";
+            this.btnTop50Sold.Size = new System.Drawing.Size(75, 23);
+            this.btnTop50Sold.TabIndex = 6;
+            this.btnTop50Sold.Text = "Top 50 Sold";
+            this.btnTop50Sold.UseVisualStyleBackColor = true;
+            this.btnTop50Sold.Click += new System.EventHandler(this.btnTop50Sold_Click);
             // 
             // SalesData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(784, 711);
+            this.Controls.Add(this.btnTop50Sold);
             this.Controls.Add(this.returnHome);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.chart1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Controls.Add(this.salesChart);
+            this.Controls.Add(this.dataGridViewResults);
+            this.Controls.Add(this.btnFetchData);
+            this.Controls.Add(this.comboBoxBookTitle);
             this.Name = "SalesData";
-            this.Text = "BookSmart - Sales Data";
+            this.Text = "Sales Data";
             this.Load += new System.EventHandler(this.SalesData_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Resize += new System.EventHandler(this.SalesData_Resize);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResults)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesChart)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
-
         }
 
-        #endregion
-
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBoxBookTitle;
+        private System.Windows.Forms.Button btnFetchData;
+        private System.Windows.Forms.DataGridView dataGridViewResults;
+        private System.Windows.Forms.DataVisualization.Charting.Chart salesChart;
         private System.Windows.Forms.Button returnHome;
+        private System.Windows.Forms.Button btnTop50Sold;
     }
 }

@@ -29,7 +29,7 @@ namespace BookSmart
             InitializeComponent();
         }
 
-        private string connectionString = "Server=KORRI-ACER\\SQLEXPRESS;Database=Booksmart;Trusted_Connection=True;";
+        private string connectionString = "Server=DESKTOP-1UT63KC\\SQLEXPRESS;Database=BookSmart;Trusted_Connection=True;";
 
         private void returnHome_Click(object sender, EventArgs e)
         {
