@@ -39,7 +39,7 @@
             // 
             this.btnFetchData.Location = new System.Drawing.Point(218, 10);
             this.btnFetchData.Name = "btnFetchData";
-            this.btnFetchData.Size = new System.Drawing.Size(75, 23);
+            this.btnFetchData.Size = new System.Drawing.Size(151, 81);
             this.btnFetchData.TabIndex = 2;
             this.btnFetchData.Text = "Fetch Data";
             this.btnFetchData.UseVisualStyleBackColor = true;
@@ -47,25 +47,31 @@
             // 
             // dataGridViewResults
             // 
+            this.dataGridViewResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewResults.Location = new System.Drawing.Point(12, 39);
+            this.dataGridViewResults.Location = new System.Drawing.Point(12, 100);
             this.dataGridViewResults.Name = "dataGridViewResults";
-            this.dataGridViewResults.Size = new System.Drawing.Size(760, 300);
+            this.dataGridViewResults.Size = new System.Drawing.Size(1880, 467);
             this.dataGridViewResults.TabIndex = 3;
             // 
             // salesChart
             // 
-            this.salesChart.Location = new System.Drawing.Point(12, 345);
+            this.salesChart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.salesChart.Location = new System.Drawing.Point(12, 589);
             this.salesChart.Name = "salesChart";
-            this.salesChart.Size = new System.Drawing.Size(760, 300);
+            this.salesChart.Size = new System.Drawing.Size(1880, 353);
             this.salesChart.TabIndex = 4;
             this.salesChart.Text = "chart1";
             // 
             // returnHome
             // 
-            this.returnHome.Location = new System.Drawing.Point(12, 660);
+            this.returnHome.Location = new System.Drawing.Point(12, 948);
             this.returnHome.Name = "returnHome";
-            this.returnHome.Size = new System.Drawing.Size(75, 23);
+            this.returnHome.Size = new System.Drawing.Size(151, 81);
             this.returnHome.TabIndex = 5;
             this.returnHome.Text = "Home";
             this.returnHome.UseVisualStyleBackColor = true;
@@ -73,9 +79,9 @@
             // 
             // btnTop50Sold
             // 
-            this.btnTop50Sold.Location = new System.Drawing.Point(100, 660);
+            this.btnTop50Sold.Location = new System.Drawing.Point(179, 948);
             this.btnTop50Sold.Name = "btnTop50Sold";
-            this.btnTop50Sold.Size = new System.Drawing.Size(75, 23);
+            this.btnTop50Sold.Size = new System.Drawing.Size(151, 81);
             this.btnTop50Sold.TabIndex = 6;
             this.btnTop50Sold.Text = "Top 50 Sold";
             this.btnTop50Sold.UseVisualStyleBackColor = true;
@@ -85,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 711);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.btnTop50Sold);
             this.Controls.Add(this.returnHome);
             this.Controls.Add(this.salesChart);
@@ -99,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResults)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesChart)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.ComboBox comboBoxBookTitle;

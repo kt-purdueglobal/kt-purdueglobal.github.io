@@ -1,20 +1,69 @@
-﻿using System;
+﻿using LiveCharts.Wpf.Charts.Base;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Windows.Controls;
+
 
 namespace BookSmart
 {
     public partial class SalesData : Form
     {
-        private string connectionString = "Server=DESKTOP-1UT63KC\\SQLEXPRESS;Database=BookSmart;Trusted_Connection=True;";
+        private string connectionString = "Server=DESKTOP-0K4N3E2\\SQLEXPRESS;Database=BookSmart;Trusted_Connection=True;";
         private const int DesiredInventoryLevel = 10; // Set this to your desired inventory level
+        private Size formOriginalSize;
+        private Rectangle recBut10;
+        private Rectangle recBut11;
+        private Rectangle recChart1;
+        private Rectangle recChart2;
+        private Rectangle recBut12;
+        private Rectangle recBut13;
 
         public SalesData()
         {
             InitializeComponent();
             LoadBookTitles();
+            this.Resize += SalesData_Resiz;
+            formOriginalSize = this.Size;
+            recBut10 = new Rectangle(comboBoxBookTitle.Location, comboBoxBookTitle.Size);
+            recBut11 = new Rectangle(btnFetchData.Location, btnFetchData.Size);
+            recChart1 = new Rectangle(dataGridViewResults.Location, dataGridViewResults.Size);
+            recChart2 = new Rectangle(salesChart.Location, salesChart.Size);
+            recBut12 = new Rectangle(returnHome.Location, returnHome.Size);
+            recBut13 = new Rectangle(btnTop50Sold.Location, btnTop50Sold.Size);
+        }
+
+        private void SalesData_Resiz(object sender, EventArgs e)
+        {
+            resize_Control(comboBoxBookTitle, recBut10);
+            resize_Control(btnFetchData, recBut11);
+            resize_Control(dataGridViewResults, recChart1);
+            resize_Control(salesChart, recChart2);
+            resize_Control(returnHome, recBut12);
+            resize_Control(btnTop50Sold, recBut13);
+        }
+
+        private void resize_Control(System.Windows.Forms.Control c, Rectangle r)
+        {
+            float xRatio = (float)(this.Width) / (float)(formOriginalSize.Width);
+            float yRatio = (float)(this.Height) / (float)(formOriginalSize.Height);
+            int newX = (int)(r.X * xRatio);
+            int newY = (int)(r.Y * yRatio);
+
+            int newWidth = (int)(r.Width * xRatio);
+            int newHeight = (int)(r.Height * yRatio);
+
+            c.Location = new Point(newX, newY);
+            c.Size = new Size(newWidth, newHeight);
         }
 
         private void SalesData_Load(object sender, EventArgs e)
